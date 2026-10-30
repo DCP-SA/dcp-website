@@ -40,5 +40,5 @@ collections:
           "audio-to-text"
         ]
         i18n: duplicate
-      - { label: Content, name: content, i18n: true, widget: richtext }
+      - { label: Content, name: body, i18n: true, widget: richtext }
       

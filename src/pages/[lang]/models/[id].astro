@@ -1,0 +1,155 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import SaudiRiyal from '../../../components/SaudiRiyal.astro';
+import { getCollection, render } from 'astro:content';
+import { useTranslations } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const models = await getCollection('models');
+  
+  return models.map((model) => {
+    const parts = model.id.split('/');
+    const lang = parts[0] as 'en' | 'ar'; 
+    const id = parts.slice(1).join('/').replace(/\.md$/, '');
+
+    return {
+      params: { lang, id },
+      props: { model, lang },
+    };
+  });
+}
+
+const { model, lang } = Astro.props;
+const { data } = model;
+
+const t = useTranslations(lang as 'en' | 'ar');
+
+// Render the markdown content
+const { Content } = await render(model);
+
+// Formatting functions
+const formatParams = (num: number) => {
+  if (!num) return 'N/A';
+  if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(1).replace(/\.0$/, '')}B`;
+  if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
+  if (num < 10_000) return `${num}B`;
+  return num.toString();
+};
+
+const formatContext = (num: number) => {
+  if (!num) return 'N/A';
+  if (num >= 1_000) return `${(num / 1_000).toFixed(0)}K`;
+  return num.toString();
+};
+
+const hourlyPrice = (data.v_ram * 0.20).toFixed(2);
+---
+
+<Layout title={`${data.name} | DCP MaaS`} lang={lang}>
+  <Header />
+  
+  <main class="flex-1 bg-zinc-950 text-white min-h-screen pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Back Link -->
+      <a href={`/${lang}/models`} class="inline-flex items-center text-zinc-400 hover:text-amber-500 transition-colors mb-8 text-sm font-medium">
+        {t('models.detail.back')}
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        
+        <!-- Main Content Area -->
+        <div class="lg:col-span-2">
+          
+          <!-- Hero Header -->
+          <div class="flex items-center gap-6 mb-8 pb-8 border-b border-zinc-800/50">
+            {data.icon ? (
+              <img src={data.icon} alt={`${data.publisher} icon`} class="w-20 h-20 rounded-xl bg-zinc-900 object-cover border border-zinc-800 shadow-lg" />
+            ) : (
+              <div class="w-20 h-20 rounded-xl bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 font-bold text-3xl shadow-lg">
+                {data.name.charAt(0)}
+              </div>
+            )}
+            <div>
+              <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">{data.name}</h1>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-zinc-400">{data.publisher}</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-zinc-700"></span>
+                <span class="px-3 py-1 rounded-full bg-zinc-800/80 text-xs font-medium text-zinc-300 border border-zinc-700">
+                  {data.type}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Markdown Body -->
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">{t('models.detail.about')}</h2>
+            <div class="prose prose-invert prose-amber max-w-none prose-headings:font-bold prose-a:text-amber-500 hover:prose-a:text-amber-400 prose-img:rounded-xl">
+              <Content />
+            </div>
+          </section>
+        </div>
+
+        <!-- Sticky Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky top-24 space-y-6">
+            
+            <!-- Specs Card -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-lg">
+              <h3 class="text-lg font-bold mb-6 pb-4 border-b border-zinc-800/80">{t('models.detail.specs')}</h3>
+              
+              <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                  <span class="text-zinc-400 text-sm">{t('models.card.parameters')}</span>
+                  <span class="font-mono text-white font-medium">{formatParams(data.parameters)}</span>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                  <span class="text-zinc-400 text-sm">{t('models.card.context')}</span>
+                  <span class="font-mono text-white font-medium">{data.context_window ? `${formatContext(data.context_window)} ${t('models.card.tokens')}` : 'N/A'}</span>
+                </div>
+                
+                <div class="flex justify-between items-center pt-4 border-t border-zinc-800/50">
+                  <span class="text-zinc-400 text-sm">{t('models.card.vram')}</span>
+                  <span class="font-mono text-amber-500 font-bold">{data.v_ram} {t('models.card.gb')}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pricing & Action Card -->
+            <div class="bg-zinc-900 border-2 border-amber-500/20 rounded-2xl p-6 shadow-lg relative overflow-hidden">
+              <div class="absolute top-0 inset-x-0 h-1 bg-amber-500"></div>
+              
+              <h3 class="text-sm font-medium text-zinc-400 mb-2">{t('models.detail.pricing_title')}</h3>
+              <div class="flex items-baseline gap-1.5 mb-6">
+                <span class="text-4xl font-black text-white">{hourlyPrice}</span>
+                <SaudiRiyal class="text-3xl text-amber-500 w-6 h-6" />
+                <span class="text-sm font-mono text-zinc-500">{t('models.card.per_hr')}</span>
+              </div>
+
+              <div class="space-y-3">
+                <a href={`/${lang}/maas`} class="block w-full bg-amber-600 hover:bg-amber-500 text-white text-center py-3 rounded-lg font-bold transition-colors shadow-lg shadow-amber-500/20">
+                  {t('models.detail.deploy_cta')}
+                </a>
+                
+                {data.hf_url && (
+                  <a href={data.hf_url} target="_blank" rel="noopener noreferrer" class="block w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-center py-3 rounded-lg font-medium transition-colors border border-zinc-700 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    {t('models.detail.hf_link')}
+                  </a>
+                )}
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>

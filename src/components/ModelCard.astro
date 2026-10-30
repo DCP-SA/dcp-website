@@ -1,0 +1,105 @@
+---
+import { useTranslations } from '../i18n/utils';
+import SaudiRiyal from './SaudiRiyal.astro'; // Adjust path based on your folder structure
+
+const { model, lang } = Astro.props;
+const { data, id } = model;
+const t = useTranslations(lang);
+
+// Hardcoded MaaS rate: 0.20 SAR per GB per hour
+const hourlyPrice = (data.v_ram * 0.20).toFixed(2);
+
+const formatParams = (num: number) => {
+  if (!num) return 'N/A';
+  if (num >= 1_000_000_000) return `${(num / 1_000_000_000).toFixed(1).replace(/\.0$/, '')}B`;
+  if (num >= 1_000_000) return `${(num / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
+  if (num < 10_000) return `${num}B`;
+  return num.toString();
+};
+
+const formatContext = (num: number) => {
+  if (!num) return 'N/A';
+  if (num >= 1_000) return `${(num / 1_000).toFixed(0)}K`;
+  return num.toString();
+};
+
+const timestamp = data.publish_date ? new Date(data.publish_date).getTime() : 0;
+
+const slug = id.split("/")[1];
+
+console.log(`id: ${id}, slug:${slug}`)
+---
+
+<div 
+  class="model-card bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-lg flex flex-col h-full hover:border-zinc-700 transition-colors"
+  data-name={data.name.toLowerCase()}
+  data-type={data.type}
+  data-params={data.parameters || 0}
+  data-date={timestamp}
+>
+  <div class="flex items-start justify-between mb-4">
+    <div class="flex items-center gap-4">
+      {data.icon ? (
+        <img src={data.icon} alt={`${data.publisher} icon`} class="w-12 h-12 rounded-lg bg-zinc-950 object-cover border border-zinc-800" />
+      ) : (
+        <div class="w-12 h-12 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-500 font-bold text-xl">
+          {data.name.charAt(0)}
+        </div>
+      )}
+      <div>
+        <h3 class="text-xl font-bold text-white leading-tight">{data.name}</h3>
+        <p class="text-zinc-400 text-sm">{data.publisher}</p>
+      </div>
+    </div>
+    <span class="px-2.5 py-1 rounded-full bg-zinc-800/80 text-xs font-medium text-zinc-300 border border-zinc-700 whitespace-nowrap">
+      {data.type}
+    </span>
+  </div>
+
+  <!-- Specs Grid -->
+  <div class="grid grid-cols-2 gap-4 my-6 flex-grow">
+    <div>
+      <p class="text-xs text-zinc-500 mb-1">{t('models.card.parameters')}</p>
+      <p class="font-mono text-zinc-200 font-medium">{formatParams(data.parameters)}</p>
+    </div>
+    <div>
+      <p class="text-xs text-zinc-500 mb-1">{t('models.card.vram')}</p>
+      <p class="font-mono text-amber-500 font-bold">{data.v_ram} {t('models.card.gb')}</p>
+    </div>
+    {data.context_window && (
+      <div class="col-span-2 border-t border-zinc-800/50 pt-3 mt-1">
+        <p class="text-xs text-zinc-500 mb-1">{t('models.card.context')}</p>
+        <p class="font-mono text-zinc-200 font-medium">{formatContext(data.context_window)} {t('models.card.tokens')}</p>
+      </div>
+    )}
+  </div>
+
+  <!-- Dynamic Pricing Row -->
+  <div class="pt-4 border-t border-zinc-800/80 mb-4 flex items-center justify-between">
+    <span class="text-sm font-medium text-zinc-400">{t('models.card.rate_label')}</span>
+    <div class="flex items-baseline gap-1.5">
+      <span class="text-xl font-bold text-white">{hourlyPrice}</span>
+      <SaudiRiyal class="text-xl text-amber-500 w-4 h-4" />
+      <span class="text-xs font-mono text-zinc-500">{t('models.card.per_hr')}</span>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="flex gap-3 mt-auto">
+    <a href={`/${lang}/models/${slug}`} class="flex-1 bg-amber-600 hover:bg-amber-500 text-white text-center py-2.5 rounded-lg font-semibold transition-colors text-sm">
+      {t('models.card.details')}
+    </a>
+    {data.hf_url && (
+      <a 
+        href={data.hf_url} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="px-4 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-lg flex items-center justify-center transition-colors text-sm border border-zinc-700" 
+        title={t('models.card.hf_title')}
+      >
+        <svg class="w-5 h-5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        HF
+      </a>
+    )}
+  </div>
+</div>

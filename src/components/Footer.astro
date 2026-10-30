@@ -5,25 +5,59 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class="border-t border-zinc-800/50 bg-zinc-950 py-8 px-6 mt-auto">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<footer class="border-t border-zinc-800/50 bg-zinc-950 pt-16 pb-8 px-6 mt-auto">
+  <div class="max-w-7xl mx-auto">
     
-    <div class="flex items-center gap-2">
-      <!-- <div class="h-6 w-6 rounded-md bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center">
-        <i data-lucide="cpu" class="w-3.5 h-3.5 text-white"></i>
+    <!-- Top Section: Fat Footer -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+      
+      <!-- Brand & SEO Description -->
+      <div class="md:col-span-6 lg:col-span-5">
+        <a href={`/${lang}`} class="inline-block mb-6">
+          <img class="h-9" src="/logo-white.png" alt="DCP Logo">
+        </a>
+        <p class="text-zinc-400 text-sm leading-relaxed max-w-md">
+          {t('footer.description')}
+        </p>
       </div>
-      <span class="text-sm font-semibold text-zinc-300">DCP</span> -->
-			<img class="h-9" src="/logo-white.png" alt="DCP">
+
+      <!-- Platform Links -->
+      <div class="md:col-span-3 lg:col-span-2 lg:col-start-8">
+        <h3 class="text-white font-semibold mb-4">{t('footer.platform')}</h3>
+        <ul class="space-y-3 text-sm text-zinc-400">
+          <li><a href={`/${lang}/maas`} class="hover:text-amber-500 transition-colors">Model-as-a-Service</a></li>
+          <li><a href={`/${lang}/api`} class="hover:text-amber-500 transition-colors">Pay-as-you-go API</a></li>
+          <li><a href={`/${lang}/theeban`} class="hover:text-amber-500 transition-colors">Theeban (SaaS)</a></li>
+          <li><a href={`/${lang}/compute`} class="hover:text-amber-500 transition-colors">Hardware & VRAM</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Links -->
+      <div class="md:col-span-3 lg:col-span-2">
+        <h3 class="text-white font-semibold mb-4">{t('footer.resources')}</h3>
+        <ul class="space-y-3 text-sm text-zinc-400">
+          <li><a href={`/${lang}/models`} class="hover:text-amber-500 transition-colors">Model Catalog</a></li>
+          <li><a href={`/${lang}/pricing`} class="hover:text-amber-500 transition-colors">Pricing</a></li>
+          <!-- Add documentation or contact links here later -->
+        </ul>
+      </div>
+      
     </div>
 
-    <p class="text-xs text-zinc-500">
-      {t('footer.rights')}
-    </p>
+    <!-- Bottom Section: Legal & Made in SA -->
+    <div class="pt-8 border-t border-zinc-800/80 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-xs text-zinc-500">
+        <p>{t('footer.rights')}</p>
+        <div class="hidden md:block w-1 h-1 rounded-full bg-zinc-700"></div>
+        <a href="#" class="hover:text-zinc-300 transition-colors">{t('footer.privacy')}</a>
+        <a href="#" class="hover:text-zinc-300 transition-colors">{t('footer.terms')}</a>
+      </div>
 
-    <div class="flex items-center gap-6 text-xs text-zinc-400">
-      <a href="#" class="hover:text-zinc-200 transition">{t('footer.privacy')}</a>
-      <a href="#" class="hover:text-zinc-200 transition">{t('footer.terms')}</a>
+      <p class="text-xs font-medium text-zinc-400 flex items-center gap-1.5 bg-zinc-900 px-3 py-1.5 rounded-full border border-zinc-800">
+        {t('footer.made_in')}
+      </p>
+
     </div>
-
   </div>
 </footer>

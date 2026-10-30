@@ -1,0 +1,159 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import ModelCard from '../../../components/ModelCard.astro';
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'ar' } },
+  ];
+}
+
+const allModels = await getCollection('models', (entry) => {
+  return entry.id.startsWith(`${lang}/`);
+});
+---
+
+<Layout title={t('models.index.page_title')} lang={lang}>
+  <Header />
+  
+  <main class="flex-1 bg-zinc-950 text-white min-h-screen pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="mb-12 border-b border-zinc-800/50 pb-8">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">{t('models.index.title')}</h1>
+        <p class="text-lg text-zinc-400 max-w-2xl">
+          {t('models.index.subtitle')}
+        </p>
+      </div>
+
+      <!-- Controls: Search, Type Filter, Sort -->
+      <div class="flex flex-col md:flex-row gap-4 mb-8">
+        <!-- Search -->
+        <div class="flex-1 relative">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder={t('models.index.search_placeholder')} 
+            class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-lg pl-10 pr-4 py-2.5 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
+          />
+        </div>
+        
+        <!-- Type Filter -->
+        <select id="type-filter" class="bg-zinc-900 border border-zinc-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-amber-500">
+          <option value="all">{t('models.index.type.all')}</option>
+          <option value="text-to-text">{t('models.index.type.text2text')}</option>
+          <option value="image-text-to-text">{t('models.index.type.vision')}</option>
+          <option value="text-to-image">{t('models.index.type.text2image')}</option>
+          <option value="audio-to-text">{t('models.index.type.audio2text')}</option>
+        </select>
+
+        <!-- Sort Filter -->
+        <select id="sort-filter" class="bg-zinc-900 border border-zinc-700 text-white rounded-lg px-4 py-2.5 focus:outline-none focus:border-amber-500">
+          <option value="date-desc">{t('models.index.sort.newest')}</option>
+          <option value="params-desc">{t('models.index.sort.params_desc')}</option>
+          <option value="params-asc">{t('models.index.sort.params_asc')}</option>
+          <option value="name-asc">{t('models.index.sort.name_asc')}</option>
+        </select>
+      </div>
+
+      <!-- Models Grid -->
+      <div id="models-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {allModels.map((model) => (
+          <ModelCard model={model} lang={lang} />
+        ))}
+      </div>
+
+      <!-- Empty State (Hidden by default) -->
+      <div id="empty-state" class="hidden text-center py-20">
+        <p class="text-zinc-500 text-lg">{t('models.index.empty_state')}</p>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  // Vanilla JS logic for fast, client-side filtering and sorting
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  const typeFilter = document.getElementById('type-filter') as HTMLSelectElement;
+  const sortFilter = document.getElementById('sort-filter') as HTMLSelectElement;
+  const grid = document.getElementById('models-grid');
+  const emptyState = document.getElementById('empty-state');
+  
+  // Cache the card elements once
+  const cards = Array.from(grid?.querySelectorAll('.model-card') || []) as HTMLElement[];
+
+  function updateGrid() {
+    if (!grid || !emptyState) return;
+
+    const query = searchInput.value.toLowerCase();
+    const selectedType = typeFilter.value;
+    const sortBy = sortFilter.value;
+    let visibleCount = 0;
+
+    // 1. Filter
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name') || '';
+      const type = card.getAttribute('data-type') || '';
+      
+      const matchesSearch = name.includes(query);
+      const matchesType = selectedType === 'all' || type === selectedType;
+      
+      if (matchesSearch && matchesType) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // 2. Sort visible cards
+    const visibleCards = cards.filter(card => card.style.display !== 'none');
+    
+    visibleCards.sort((a, b) => {
+      const aName = a.getAttribute('data-name') || '';
+      const bName = b.getAttribute('data-name') || '';
+      const aParams = parseFloat(a.getAttribute('data-params') || '0');
+      const bParams = parseFloat(b.getAttribute('data-params') || '0');
+      const aDate = parseInt(a.getAttribute('data-date') || '0');
+      const bDate = parseInt(b.getAttribute('data-date') || '0');
+
+      switch (sortBy) {
+        case 'name-asc':
+          return aName.localeCompare(bName);
+        case 'params-desc':
+          return bParams - aParams;
+        case 'params-asc':
+          return aParams - bParams;
+        case 'date-desc':
+        default:
+          return bDate - aDate;
+      }
+    });
+
+    // 3. Re-append in sorted order (DOM automatically moves them, no duplication)
+    visibleCards.forEach(card => grid.appendChild(card));
+
+    // 4. Toggle empty state
+    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  // Attach event listeners
+  searchInput?.addEventListener('input', updateGrid);
+  typeFilter?.addEventListener('change', updateGrid);
+  sortFilter?.addEventListener('change', updateGrid);
+
+  // Trigger initial sort on load
+  updateGrid();
+</script>

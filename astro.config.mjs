@@ -17,6 +17,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+			typography,
 			tailwindcss(),
       {
         name: 'serve-root-admin',

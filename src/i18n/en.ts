@@ -289,6 +289,45 @@ export const en = {
   'compute.reed.price': '0.20',
   'compute.reed.unit': 'per GB / hour',
 
+	// Model Card
+  'models.card.parameters': 'Parameters',
+  'models.card.vram': 'VRAM Required',
+  'models.card.gb': 'GB',
+  'models.card.context': 'Context Window',
+  'models.card.tokens': 'Tokens',
+  'models.card.details': 'Details',
+  'models.card.hf_title': 'View on Hugging Face',
+	'models.card.rate_label': 'Active Rate',
+  'models.card.per_hr': '/ hr',
+
+	// Models Catalog Index
+  'models.index.page_title': 'Model Catalog | DCP MaaS',
+  'models.index.title': 'Model Catalog',
+  'models.index.subtitle': 'Browse our curated registry of vetted open-weights models, ready for instant True Active Billing deployment on dedicated VRAM.',
+  
+  'models.index.search_placeholder': 'Search models...',
+  
+  'models.index.type.all': 'All Types',
+  'models.index.type.text2text': 'Text to Text',
+  'models.index.type.vision': 'Vision (VLM)',
+  'models.index.type.text2image': 'Text to Image',
+  'models.index.type.audio2text': 'Audio to Text',
+  
+  'models.index.sort.newest': 'Newest First',
+  'models.index.sort.params_desc': 'Parameters (High to Low)',
+  'models.index.sort.params_asc': 'Parameters (Low to High)',
+  'models.index.sort.name_asc': 'Name (A-Z)',
+  
+  'models.index.empty_state': 'No models found matching your filters.',
+
+	// Model Details Page
+  'models.detail.specs': 'Specifications',
+  'models.detail.about': 'About this Model',
+  'models.detail.deploy_cta': 'Deploy on MaaS',
+  'models.detail.hf_link': 'View on Hugging Face',
+  'models.detail.pricing_title': 'Inference Pricing',
+  'models.detail.back': '← Back to Catalog',
+
   // Pricing
   'home.price_title': 'Transparent, Capability-Based Pricing',
   'home.price_subtitle': 'Choose a workspace subscription for your team, or pay-as-you-go for direct API integration.',
@@ -346,9 +385,13 @@ export const en = {
   'nav.workspace': 'Workspace',
 
 	// Footer
-  'footer.rights': '© 2026 DCP Cloud. All rights reserved.',
+  'footer.description': 'DCP is Saudi Arabia\'s premier sovereign AI platform. We deliver Zero-Knowledge compute, dedicated VRAM, and Model-as-a-Service infrastructure from secure, locally hosted datacenters in the Kingdom.',
+  'footer.platform': 'Platform',
+  'footer.resources': 'Resources',
+  'footer.rights': '© 2024 DCP. All rights reserved.',
   'footer.privacy': 'Privacy Policy',
   'footer.terms': 'Terms of Service',
+  'footer.made_in': 'Engineered securely in Saudi Arabia 🇸🇦',
 
 	// Capabilities Page
   'cap.hero.title': 'Intelligence at Your Fingertips. Compute on Your Terms.',
