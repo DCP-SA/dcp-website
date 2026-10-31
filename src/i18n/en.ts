@@ -2,7 +2,7 @@ export const en = {
 	// Hero
 	"hero.badge": "100% Built and Hosted in Saudi Arabia",
 	"hero.title_start": "The Zero-Knowledge",
-	"hero.title_highlight": "AI Infrastructure Platform.",
+	"hero.title_highlight": "AI Infrastructure Platform",
 	"hero.subtitle": "Enterprise-grade AI chat with Theeban, 1-click Hugging Face deployments, and serverless API endpoints. Secure, scalable, and proudly engineered by Saudi talent for the unique needs of the Saudi market.",
 	"hero.cta_primary": "Meet Theeban (ذيبان)",
 	"hero.cta_secondary": "Deploy a Model",
@@ -328,25 +328,6 @@ export const en = {
   'models.detail.pricing_title': 'Inference Pricing',
   'models.detail.back': '← Back to Catalog',
 
-  // Pricing
-  'home.price_title': 'Transparent, Capability-Based Pricing',
-  'home.price_subtitle': 'Choose a workspace subscription for your team, or pay-as-you-go for direct API integration.',
-  'home.workspace_title': 'Workspace Subscriptions',
-  'home.standard.desc': 'Ideal for everyday tasks and standard workloads.',
-  'home.month': 'month',
-  'home.feat.fast_unlimited': 'Unlimited Fast Model usage',
-  'home.feat.pro_standard': 'Pro Model (Standard 4-hour quota)',
-  'home.feat.degrade': 'Graceful shift to Fast when quota is met',
-  'home.recommended': 'Recommended',
-  'home.enterprise.desc': 'For heavy analytics, research, and data science.',
-  'home.feat.pro_high': 'Pro Model (High 4-hour quota)',
-  'home.feat.deep_research': 'Deep Research Model access',
-  'home.feat.jupyter': 'Managed Jupyter Compute included',
-  'home.api_title': 'API Pay-As-You-Go',
-  'home.api_desc': 'API usage is billed per token. Cost is calculated dynamically based on the capability weight of the chosen endpoint.',
-  'home.weight': 'Multiplier',
-  'home.sar': 'SAR',
-
   // App Teaser
   'app.title': 'Take Zero-Knowledge AI on the Go',
   'app.subtitle': 'Our native mobile apps will bring full end-to-end encryption and seamless workspace syncing to your pocket.',
@@ -392,41 +373,6 @@ export const en = {
   'footer.privacy': 'Privacy Policy',
   'footer.terms': 'Terms of Service',
   'footer.made_in': 'Engineered securely in Saudi Arabia 🇸🇦',
-
-	// Capabilities Page
-  'cap.hero.title': 'Intelligence at Your Fingertips. Compute on Your Terms.',
-  'cap.hero.subtitle': 'From zero-knowledge conversational AI to drop-in APIs and managed Jupyter environments, DCP Cloud delivers the exact compute weight you need, the moment you need it.',
-  
-  'cap.models.title': 'The Model Fleet',
-  'cap.fast.title': 'dcp/fast',
-  'cap.fast.desc': 'The Workhorse. Optimized for low latency and high throughput. Perfect for real-time chat, data extraction, and drafting. Unlimited on Workspace tiers.',
-  'cap.pro.title': 'dcp/pro',
-  'cap.pro.desc': 'The Reasoner. Advanced reasoning for complex logic, coding, and multi-step workflows. Operates on a 4-hour rolling quota.',
-  'cap.pro.degrade': 'Chat UX: Gracefully degrades to Fast when quota is met.',
-  'cap.research.title': 'dcp/deep-research',
-  'cap.research.desc': 'The Analyst. Massive context window and deep web synthesis for exhaustive research reports and heavy data analysis.',
-  
-  'cap.interfaces.title': 'Delivery Interfaces',
-  'cap.ws.title': 'Zero-Knowledge Workspace',
-  'cap.ws.desc': 'A highly secure, passkey-protected chat interface built for enterprise teams.',
-  'cap.ws.feat1': 'End-to-end encrypted history',
-  'cap.ws.feat2': 'Seamless model switching & graceful degradation',
-  
-  'cap.api.title': 'Drop-In API (OpenAI Compatible)',
-  'cap.api.desc': 'Don\'t rewrite your apps. Just change the base URL and API key to connect to our endpoints.',
-  'cap.api.feat1': 'Stateless architecture (prompts never logged)',
-  'cap.api.feat2': 'Weighted token billing (pay exactly for what you use)',
-  
-  'cap.jupyter.title': 'Data Science, Fully Managed',
-  'cap.jupyter.subtitle': 'Skip the DevOps. Spin up isolated, high-performance Jupyter Notebooks pre-configured with the latest ML frameworks. Access raw GPU compute backed by encrypted, persistent block storage—billed by the minute.',
-  
-  'cap.guarantees.title': 'Enterprise Guarantees',
-  'cap.g1.title': 'Saudi Data Residency',
-  'cap.g1.desc': '100% of compute and data storage remains physically within the KSA infrastructure.',
-  'cap.g2.title': 'Zero-Knowledge Pipeline',
-  'cap.g2.desc': 'We cannot read your prompts. Everything is encrypted at rest via ECIES and AES-256.',
-  'cap.g3.title': 'Predictable Scaling',
-  'cap.g3.desc': 'High-availability infrastructure ensuring your production APIs stay responsive under load.',
 
 	// Security Page
   'sec.hero.title': 'Cryptographic Privacy. Zero-Knowledge Storage.',

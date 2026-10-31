@@ -1,12 +1,57 @@
 export const ar = {
-  // Hero
-  'hero.badge': 'بنية تحتية مشفرة بالكامل (Zero-Knowledge)',
-  'hero.title_start': 'ذكاء اصطناعي للمؤسسات،',
-  'hero.title_highlight': 'بدون أي تنازلات.',
-  'hero.subtitle': 'بنية تحتية آمنة ومحلية لمحادثات الذكاء الاصطناعي وواجهات برمجة التطبيقات (API). مدعومة بتشفير ECIES من جهة العميل وخوادم مدارة.',
-  'hero.cta_primary': 'ابدأ مساحة العمل',
-  'hero.cta_secondary': 'اقرأ المستندات',
+	// Hero
+	"hero.badge": "مُصمم ومُستضاف 100% في المملكة العربية السعودية",
+	"hero.title_start": "منصة البنية التحتية للذكاء الاصطناعي",
+	"hero.title_highlight": "بتقنية المعرفة الصفرية (Zero-Knowledge)",
+	"hero.subtitle": "محادثة ذكاء اصطناعي للمؤسسات عبر «ذيبان»، نشر بضغطة زر واحدة من Hugging Face، وواجهات برمجة تطبيقات (API) بدون خوادم. آمن، قابل للتوسع، ومُهندس بفخر بأيدٍ سعودية لتلبية الاحتياجات الفريدة للسوق السعودي.",
+	"hero.cta_primary": "تعرّف على ذيبان",
+	"hero.cta_secondary": "انشر نموذجاً",
+
+	// Theeban Showcase (Homepage)
+  'home.theeban.badge': 'برمجيات مؤسسية كخدمة (SaaS)',
+  'home.theeban.title': 'تعرّف على ذيبان',
+  'home.theeban.subtitle': 'المساعد الذكي بتقنية المعرفة الصفرية، صُمم خصيصاً للقطاعين الحكومي والمؤسسي في السعودية. معزول تشفيرياً، متعدد النماذج، ومستضاف محلياً بنسبة 100%.',
+  'home.theeban.feature1.title': 'سيادة مطلقة على البيانات',
+  'home.theeban.feature1.desc': 'إذا كنا قادرين على تسريبها، فهي ليست آمنة. بياناتك لا تغادر المملكة أبداً ولا يمكن لفريق البنية التحتية لدينا الوصول إليها.',
+  'home.theeban.feature2.title': 'مرونة كاملة في اختيار النماذج',
+  'home.theeban.feature2.desc': 'تنقل بسلاسة بين النماذج السريعة والاحترافية ونماذج البحث العميق بناءً على مهمتك المحددة.',
+  'home.theeban.feature3.title': 'جاهز للامتثال التنظيمي',
+  'home.theeban.feature3.desc': 'بُني من الأساس لتلبية معايير ولوائح البيانات الصارمة في قطاعات الصحة والمالية والحكومة السعودية.',
+  'home.theeban.cta': 'اكتشف ذيبان',
+
+	// Security Architecture Section (Homepage)
+  'home.security.eyebrow': 'الثقة والامتثال المؤسسي',
+  'home.security.title': 'بنية خالية من المعرفة (Zero-Knowledge) منذ التأسيس.',
+  'home.security.subtitle': 'صُمم لأعلى معايير الامتثال في المملكة العربية السعودية. إذا كان بإمكاننا تسريب بياناتك عبر صلاحيات الجذر (Root)، فهي ليست آمنة — لذلك صممنا المنصة بحيث يستحيل علينا ذلك تقنياً.',
+  'home.security.p1.title': '100% سيادة على البيانات',
+  'home.security.p1.desc': 'كل استعلام، وذاكرة تخزين مؤقت، وأوزان نماذج محسّنة تُستضاف حصرياً على خوادم مادية (Bare-Metal) تقع فعلياً داخل أراضي المملكة العربية السعودية.',
+  'home.security.p2.title': 'تخزين خالٍ من المعرفة (Zero-Knowledge)',
+  'home.security.p2.desc': 'تشفير سلس وشفاف. سجلات المحادثات وحزم بيانات الـ API مؤمنة تشفيرياً أثناء السكون. لا يمكن لفريق البنية التحتية لدينا فك تشفير بياناتك.',
+  'home.security.p3.title': 'عزل صارم للنماذج',
+  'home.security.p3.desc': 'تعمل نماذجنا السريعة والاحترافية ونماذج البحث العميق في بيئات تشغيل معزولة بالكامل. لا تُستخدم بيانات منشأتك الخاصة إطلاقاً في عمليات التدريب المستمر.',
+  'home.security.p4.title': 'أمان شامل لتشغيل الأدوات',
+  'home.security.p4.desc': 'يتم تشغيل وكلاء الذكاء الاصطناعي واستدعاء الأدوات الخارجية داخل بيئات معزولة (Sandboxed). مفاتيح الـ API لعمليات الربط الخارجية لا تغادر خزينتك المشفرة أبداً.',
   
+	// MaaS Deployer Teaser (Homepage) - TRUE ACTIVE BILLING
+  'home.maas.badge': 'النموذج كخدمة (BYOM)',
+  'home.maas.title': 'احلب نموذجك الخاص. انشره في ثوانٍ معدودة.',
+  'home.maas.subtitle': 'تجاوز تعقيدات إعداد الخوادم المادية. الصق رابط أي مستودع من Hugging Face (حتى المستودعات الخاصة) وأنشئ فوراً سعة VRAM مخصصة مدعومة بمحرك vLLM. بدون لينكس، بدون تعريفات، وبدون انتظار.',
+  'home.maas.feature1.title': 'تخصيص VRAM مستقل بالكامل',
+  'home.maas.feature1.desc': 'بسعر 0.20 ر.س/جيجابايت/ساعة فقط، تصبح هذه الذاكرة ملكك 100%. نضمن لك عدم وجود أوقات انتظار وتحقيق أقصى معدل إنتاجية لنموذجك.',
+  'home.maas.feature2.title': 'فوترة وقت التشغيل الفعلي (True Active Billing)',
+  'home.maas.feature2.desc': 'أنت تدفع فقط عن الثواني الدقيقة التي يكون فيها نموذجك في حالة "نشط". لا تدفع أبداً مقابل تنزيل الأوزان، أو أوقات بدء التشغيل البارد (Cold Starts)، أو الإيقاف. أوقف التشغيل مؤقتاً، وتتوقف الفوترة فوراً.',
+  'home.maas.cta': 'استكشف باقات الحوسبة',
+
+	// API Developers Section (Homepage)
+  'home.api.badge': 'نقاط نهاية API بدون خوادم',
+  'home.api.title': 'بديل فوري وبسيط لبنيتك البرمجية الحالية.',
+  'home.api.subtitle': 'واجهة الـ API متوافقة تماماً مع حزمة OpenAI SDK. يمكنك الوصول إلى Llama 3 و Mistral وأفضل النماذج مفتوحة الأوزان فوراً دون الحاجة لإعادة كتابة منطق تطبيقاتك.',
+  'home.api.feature1.title': 'ادفع حسب الرمز (Pay Per Token)',
+  'home.api.feature1.desc': 'بدون رسوم ساعية. لا تكاليف لأوقات الخمول. ادفع بدقة مقابل رموز الإدخال والإخراج التي تستهلكها بأسعار سوقية تنافسية للغاية.',
+  'home.api.feature2.title': 'استدلال فائق السرعة',
+  'home.api.feature2.desc': 'مدعوم بمحرك vLLM المخصص للمؤسسات، موفراً قدرة توازي هائلة وأدنى زمن استجابة للرمز الأول (TTFT).',
+  'home.api.cta': 'عرض توثيق API',
+
   // Capabilities
   'home.section_title': 'ذكاء مخصص حسب المهمة',
   'home.section_subtitle': 'توجيه ذكي ومخفي يضمن حصولك على نموذج التفكير المناسب بالسعر المناسب وفي لحظات.',
@@ -34,24 +79,254 @@ export const ar = {
   'home.tee.desc': 'تشفير كامل من البداية إلى النهاية يمتد من متصفحك مباشرة إلى بيئات التنفيذ الموثوقة والمعزولة في معالجات الرسومات.',
   'home.tee.tag': 'قريباً',
 
-  // Pricing
-  'home.price_title': 'تسعير شفاف يعتمد على القدرات',
-  'home.price_subtitle': 'اختر اشتراك مساحة العمل لفريقك، أو ادفع حسب الاستخدام لربط واجهة برمجة التطبيقات (API).',
-  'home.workspace_title': 'اشتراكات مساحة العمل',
-  'home.standard.desc': 'مثالي للمهام اليومية وأعباء العمل القياسية.',
-  'home.month': 'شهر',
-  'home.feat.fast_unlimited': 'استخدام غير محدود للنموذج السريع (Fast)',
-  'home.feat.pro_standard': 'النموذج الاحترافي (حصة قياسية كل 4 ساعات)',
-  'home.feat.degrade': 'انتقال سلس للنموذج السريع عند انتهاء الحصة',
-  'home.recommended': 'موصى به',
-  'home.enterprise.desc': 'للتحليلات الثقيلة والأبحاث وعلوم البيانات.',
-  'home.feat.pro_high': 'النموذج الاحترافي (حصة عالية كل 4 ساعات)',
-  'home.feat.deep_research': 'الوصول لنموذج البحث العميق (Deep Research)',
-  'home.feat.jupyter': 'يشمل خوادم Jupyter المدارة',
-  'home.api_title': 'الدفع حسب الاستخدام (API)',
-  'home.api_desc': 'يُحسب الاستخدام بناءً على الرموز (Tokens). وتُحسب التكلفة ديناميكياً بناءً على وزن قدرة النموذج المختار.',
-  'home.weight': 'مُضاعِف (Multiplier)',
-  'home.sar': '⃁',
+  // Theeban Pricing Section
+  'theeban.pricing.badge': 'تسعير بسيط وآمن',
+  'theeban.pricing.title': 'اختر باقة الذكاء المناسبة لك.',
+  'theeban.pricing.subtitle': 'من المهام التشغيلية اليومية إلى التحليل المتعمق للسوق المحلي. بدون أي رسوم خفية.',
+  
+  // Starter Tier
+  'theeban.pricing.starter.name': 'الأساسية (Starter)',
+  'theeban.pricing.starter.price': '30',
+  'theeban.pricing.starter.period': 'ر.س / شهر',
+  'theeban.pricing.starter.desc': 'ريال واحد فقط يومياً للحصول على ذكاء اصطناعي آمن وبمستوى المؤسسات.',
+  'theeban.pricing.starter.f1': 'استخدام غير محدود للنماذج السريعة والاحترافية',
+  'theeban.pricing.starter.f2': 'رفع المستندات والصور (RAG)',
+  'theeban.pricing.starter.f3': 'أدوات الوكلاء الذكية القياسية',
+  
+  // Pro Tier
+  'theeban.pricing.pro.name': 'الاحترافية (Pro)',
+  'theeban.pricing.pro.price': '99',
+  'theeban.pricing.pro.period': 'ر.س / شهر',
+  'theeban.pricing.pro.desc': 'للباحثين والمختصين في القطاع الحكومي والخاص.',
+  'theeban.pricing.pro.f1': 'كل ما هو متوفر في الباقة الأساسية',
+  'theeban.pricing.pro.f2': 'نموذج البحث العميق (حدود استخدام قياسية)',
+  'theeban.pricing.pro.f3': 'ربط مباشر مع واجهات الـ API الحكومية السعودية',
+  
+  // Advanced Tier
+  'theeban.pricing.advanced.name': 'المتقدمة (Advanced)',
+  'theeban.pricing.advanced.price': '499',
+  'theeban.pricing.advanced.period': 'ر.س / شهر',
+  'theeban.pricing.advanced.desc': 'للمحترفين الماليين وكبار المستخدمين.',
+  'theeban.pricing.advanced.f1': 'كل ما هو متوفر في الباقة الاحترافية',
+  'theeban.pricing.advanced.f2': 'نموذج البحث العميق (أعلى حدود استخدام)',
+  'theeban.pricing.advanced.f3': 'أدوات التداول المباشر وبيانات السوق المالي (تداول)',
+  'theeban.pricing.cta': 'ابدأ المحادثة الآمنة',
+
+  // Theeban Page - Hero
+  'theeban.hero.badge': 'المساعد الذكي بتقنية المعرفة الصفرية',
+  'theeban.hero.title': 'تعرّف على ذيبان (Theeban)',
+  'theeban.hero.subtitle': 'تحدث، وحلل بيانات السوق المحلي، ونفّذ أبحاثاً متعمقة مع سيادة مطلقة على بياناتك. محمي بتشفير فائق ومدمج أصلياً مع البنية التحتية السعودية.',
+  'theeban.hero.cta_primary': 'ابدأ مقابل 30 ر.س',
+  'theeban.hero.cta_secondary': 'عرض الأسعار',
+
+  // Theeban Page - Trust Pillar
+  'theeban.trust.title': 'ثقة مبنية على التشفير والرياضيات، لا على الوعود.',
+  'theeban.trust.f1.title': '100% سيادة على البيانات',
+  'theeban.trust.f1.desc': 'مستضاف حصرياً على خوادم مادية محلية داخل المملكة. متوافق تماماً مع نظام حماية البيانات الشخصية (PDPL).',
+  'theeban.trust.f2.title': 'عزل تشفيري كامل',
+  'theeban.trust.f2.desc': 'مفاتيح مؤقتة تغلف كل جلسة. لا يمكننا قراءة محادثاتك أو مستنداتك حتى مع صلاحيات الوصول المباشر لقاعدة البيانات.',
+  'theeban.trust.f3.title': 'حماية الملكية الفكرية للمنشأة',
+  'theeban.trust.f3.desc': 'بياناتك ملكك وحدك. لا تُستخدم إطلاقاً لتدريب النماذج أو التعليم المستمر. نهائياً.',
+
+  // Theeban Page - Saudi Tooling
+  'theeban.tools.badge': 'تكاملات سعودية أصيلة',
+  'theeban.tools.title': 'مُهندس لخدمة المنظومة المحلية.',
+  'theeban.tools.f1.title': 'واجهات برمجة التطبيقات الحكومية وبيانات السوق',
+  'theeban.tools.f1.desc': 'ربط مباشر مع مجموعات البيانات العامة السعودية وبيانات السوق من داخل واجهة المحادثة مباشرة.',
+  'theeban.tools.f2.title': 'تصفح محلي ذكي',
+  'theeban.tools.f2.desc': 'أدوات جمع بيانات مخصصة لقراءة وتحليل بوابات الأخبار والمواقع الحكومية السعودية فوراً.',
+  'theeban.tools.f3.title': 'دعم أصيل لتقويم أم القرى',
+  'theeban.tools.f3.desc': 'فهم وتحويل دقيق للتاريخ الهجري للتخطيط الرسمي وإصدار الوثائق الحكومية.',
+  'theeban.tools.f4.title': 'توليد مدعم بالاسترجاع (RAG) متعدد الوسائط باللغة العربية',
+  'theeban.tools.f4.desc': 'اسحب وأفلت ملفات PDF والمستندات العربية والصور للتعرف الضوئي الفوري وتحليل النصوص بدقة عالية.',
+
+  // Theeban Page - Intelligence Engine (Models)
+  'theeban.models.badge': 'محرك الذكاء',
+  'theeban.models.title': 'ثلاثة مستويات. قدرات لا محدودة.',
+  'theeban.models.fast.title': 'السريع (Fast)',
+  'theeban.models.fast.desc': 'استجابة فائقة السرعة. مثالي لصياغة رسائل البريد الإلكتروني، والترجمات السريعة، والمهام التشغيلية اليومية.',
+  'theeban.models.pro.title': 'الاحترافي (Pro)',
+  'theeban.models.pro.desc': 'النموذج القوي. تفكير متقدم لتحليل المستندات العربية المعقدة وكتابة الأكواد البرمجية.',
+  'theeban.models.deep.title': 'البحث العميق (Deep-Research)',
+  'theeban.models.deep.desc': 'بحث متعدد الخطوات بشكل مستقل. يتصفح ذيبان الويب، ويجمع المصادر، ويصيغ تقارير شاملة ومكتملة.',
+
+  // API Page - Hero
+  'api.hero.badge': 'واجهة المطورين (API)',
+  'api.hero.title': 'نقاط نهاية بدون خوادم. انتقال سلس وفوري.',
+  'api.hero.subtitle': 'متوافق تماماً مع حزمة OpenAI SDK. احصل على وصول مباشر لنماذجنا المحسّنة بأدنى زمن استجابة. نسجل فقط بيانات الاستهلاك للأغراض المحاسبية، ولا نسجل حمولات البيانات أبداً.',
+  'api.hero.cta_primary': 'إنشاء مفتاح API',
+  'api.hero.cta_secondary': 'قراءة التوثيق',
+
+  // API Page - Features
+  'api.features.f1.title': 'استجابة فائقة للرمز الأول (TTFT)',
+  'api.features.f1.desc': 'مدعوم بمحرك vLLM للمؤسسات، ومصمم لتنفيذ كميات هائلة من الطلبات المتزامنة بأقل تأخير ممكن.',
+  'api.features.f2.title': 'انعدام تام للسجلات (Zero Logging)',
+  'api.features.f2.desc': 'نحتفظ ببيانات الاستهلاك فقط لأغراض الفوترة. لا نسجل حمولات البيانات أو نخزنها أو نتدرب عليها. تتلاشى طلباتك في اللحظة التي يكتمل فيها الاستدلال.',
+  'api.features.f3.title': 'بنية تحتية سيادية',
+  'api.features.f3.desc': 'يتم توجيه ومعالجة جميع طلبات الـ API بالكامل على خوادم مادية واقعة داخل المملكة العربية السعودية.',
+
+  // API Page - Economics
+  'api.pricing.badge': 'اقتصاديات واضحة وشفافة',
+  'api.pricing.title': 'ادفع فقط مقابل ما تستهلكه في الحوسبة.',
+  'api.pricing.subtitle': 'يرتكز تسعيرنا على سعر أساسي لكل مليون رمز، ويتم ضبطه ديناميكياً عبر مضاعفات تعتمد على النموذج وحجم عبء العمل.',
+  'api.pricing.base_label': 'السعر الأساسي (المدخلات)',
+  'api.pricing.base_per_m': '/ 1 مليون رمز',
+  
+  // Multipliers
+  'api.pricing.m_fast': 'مدخلات النموذج السريع (Fast)',
+  'api.pricing.m_pro': 'مدخلات النموذج الاحترافي (Pro)',
+  'api.pricing.m_deep': 'مدخلات نموذج البحث العميق (Deep-Research)',
+  'api.pricing.m_output': 'رموز المخرجات (لكافة النماذج)',
+  'api.pricing.m_cache': 'مدخلات الذاكرة المؤقتة (Cache-Hit)',
+
+  // MaaS Page - Hero
+  'maas.hero.badge': 'النموذج كخدمة مخصص (Dedicated MaaS)',
+  'maas.hero.title': 'احلب نموذجك الخاص. انشره في ثوانٍ معدودة.',
+  'maas.hero.subtitle': 'تجاوز تجهيز الخوادم المادية، وتعريفات CUDA، وضبط توزيعات Linux. الصق رابط أي مستودع على Hugging Face — عاماً كان أو خاصاً — وشغّل فوراً سعة VRAM مخصصة مدعومة بمحرك vLLM.',
+  'maas.hero.cta_primary': 'انشر في مساحة العمل',
+  'maas.hero.cta_secondary': 'مقارنة نماذج الفوترة',
+
+  // MaaS Page - True Active Billing
+  'maas.billing.badge': 'فوترة وقت التشغيل الفعلي (True Active Billing)',
+  'maas.billing.title': 'توقف عن الدفع لأوقات الخمول وبدء التشغيل والتنزيل.',
+  'maas.billing.subtitle': 'تفرض عليك خدمات معالجات الرسومات السحابية التقليدية الفوترة فور إقلاع الخادم — حتى أثناء تصحيح إعدادات SSH أو انتظار تحميل الأوزان لمدة 20 دقيقة. مع DCP، تدفع فقط مقابل فترات الجاهزية الفعلية للاستدلال.',
+  'maas.billing.card_traditional': 'خدمات GPU السحابية التقليدية (الخوادم والسحب العامة)',
+  'maas.billing.card_traditional_desc': 'تتم الفوترة باستمرار طوال فترة الإعداد اليدوي، وأوقات انتظار التحميل عبر الشبكة، وعمليات التفريغ الخلفية.',
+  'maas.billing.card_dcp': 'خدمة MaaS المخصصة من DCP',
+  'maas.billing.card_dcp_desc': 'تحميل مجاني للأوزان، تهيئة مجانية لمحرك vLLM، وصفر تكاليف لتأخير الإنهاء. أنت تدفع فقط أثناء كون الخادم نشطاً وجاهزاً.',
+
+  // MaaS Page - Dedicated VRAM
+  'maas.dedicated.badge': 'أداء نقي دون مشاركة موارد (No Noisy Neighbors)',
+  'maas.dedicated.title': 'ذاكرة VRAM مخصصة. أداء مضمون.',
+  'maas.dedicated.f1.title': 'كتل ذاكرة معزولة',
+  'maas.dedicated.f1.desc': 'تُحجز الجيجابايتات المخصصة لك حصرياً لنموذجك. لا منافسة على الذاكرة، ولا اضطراب في التخزين المؤقت، ودون أي تأثير من مستخدمين مجاورين.',
+  'maas.dedicated.f2.title': 'بدون تشغيل بارد (No Cold Starts)',
+  'maas.dedicated.f2.desc': 'على عكس بيئات الحوسبة بدون خوادم التي تُجمّد الأجهزة عند الخمول، يحافظ تخصيصك المباشر على بقاء النموذج محملاً وجاهزاً في الذاكرة.',
+  'maas.dedicated.f3.title': 'تزامن عالي مدعوم أصلياً بـ vLLM',
+  'maas.dedicated.f3.desc': 'دعم مدمج لأحدث تقنيات PagedAttention والتجميع المستمر للدفعات، مما يوفر أعلى معدل إنتاجية للرموز في الثانية.',
+
+  // MaaS Page - 3-Step Workflow
+  'maas.steps.badge': 'خطوات النشر',
+  'maas.steps.title': 'من مستودع Hugging Face إلى نقطة نهاية إنتاجية',
+  'maas.steps.s1.step': '01',
+  'maas.steps.s1.title': 'أدخل أوزان نموذجك',
+  'maas.steps.s1.desc': 'الصق أي رابط مستودع من Hugging Face. انشر نماذجك المخصصة باستخدام رمز وصول خاص (Token)، أو اختر نموذجاً مكمماً معتمداً (AWQ، GPTQ، FP8) يناسب سعة الذاكرة المستهدفة.',
+  'maas.steps.s2.step': '02',
+  'maas.steps.s2.title': 'حدّد سعة VRAM المخصصة',
+  'maas.steps.s2.desc': 'لا تدفع قيمة بطاقة رسومات كاملة بينما لا تحتاج سوى لجزء منها. حرّك المؤشر لتحديد سعة VRAM الدقيقة، ونحن نتكفل بتوزيع أجزاء النموذج عبر العنقود الحسابي.',
+  'maas.steps.s3.step': '03',
+  'maas.steps.s3.title': 'نقطة نهاية إنتاجية فورية',
+  'maas.steps.s3.desc': 'انقر على "نشر". بمجرد اكتمال تحميل الأوزان وتحول حالة الـ API إلى اللون الأخضر، تصبح نقطة النهاية المتوافقة مع OpenAI جاهزة لاستقبال حركة البيانات الإنتاجية.',
+
+  // MaaS Page - Pricing Banner
+  'maas.pricing.badge': 'تسعير واضح ومحدد للذاكرة',
+  'maas.pricing.title': '0.20',
+  'maas.pricing.unit': 'لكل جيجابايت / ساعة',
+  'maas.pricing.note': 'كتل ذاكرة مخصصة. تُحسب الفوترة بدقة بالثانية النشطة فقط.',
+  'maas.pricing.cta': 'فتح نافذة النشر في مساحة العمل',
+
+	// Compute Page - Hero
+  'compute.hero.badge': 'بنية تحتية للذكاء الاصطناعي عالية الأداء',
+  'compute.hero.title': 'طاقة معالجة رسومات لا محدودة',
+  'compute.hero.subtitle': 'قمنا بتجريد العتاد المادي إلى وحدات GPU مخصصة سعة 32 جيجابايت. احصل على المكافئ الدقيق لذاكرة RTX 5090 أو H200 أو عنقود HGX كامل، مع الدفع فقط أثناء قيام نماذجك بالاستدلال الفعلي.',
+  'compute.hero.cta_primary': 'انشر عبر MaaS',
+  'compute.hero.cta_secondary': 'عرض جدول المكافئات',
+
+  // Compute Page - Mental Model Cards
+  'compute.cards.badge': 'النموذج الذهني للحوسبة',
+  'compute.cards.title': 'مطابق للعتاد الذي تألفه تماماً.',
+	'compute.cards.price_suffix': '/ ساعة (وقت النشاط)',
+  
+  'compute.cards.c1.unit': 'وحدة واحدة (1 Unit)',
+  'compute.cards.c1.vram': '32 جيجابايت VRAM',
+  'compute.cards.c1.equiv': 'المكافئ لـ RTX 5090',
+  'compute.cards.c1.desc': 'بيئة التجارب. مثالية لتوليد التضمينات (Embeddings) السريعة، وتجربة نماذج التعليمات الصغيرة، وبيئات التطوير المعزولة.',
+	'compute.cards.c1.price': '6.40',
+  
+  'compute.cards.c2.unit': '5 وحدات (5 Units)',
+  'compute.cards.c2.vram': '160 جيجابايت VRAM',
+  'compute.cards.c2.equiv': 'المكافئ لـ H200',
+  'compute.cards.c2.desc': 'حصان العمل للمؤسسات. الخيار الأمثل للنشر الإنتاجي لنماذج 70B–100B التي تتطلب ذاكرة KV ضخمة لمعالجة التزامن العالي.',
+	'compute.cards.c2.price': '32.00',
+  
+  'compute.cards.c3.unit': '16 وحدة (16 Units)',
+  'compute.cards.c3.vram': '512 جيجابايت VRAM',
+  'compute.cards.c3.equiv': 'عنقود HGX فائق (Super-Node)',
+  'compute.cards.c3.desc': 'عنقود النماذج الرائدة. تشغيل نماذج MoE الضخمة والنماذج المتقدمة. مدعوم بروابط بينية مؤسسية يستحيل مضاهاتها في الأجهزة الاستهلاكية.',
+	'compute.cards.c3.price': '102.40',
+
+  // Compute Page - SEO Table
+  'compute.table.badge': 'مكافئات البنية التحتية',
+  'compute.table.title': 'خدمات GPU التقليدية مقابل خدمة MaaS من DCP',
+  'compute.table.th1': 'العتاد المطلوب',
+  'compute.table.th2': 'عوائق خدمات GPU التقليدية',
+  'compute.table.th3': 'مكافئ DCP MaaS',
+  'compute.table.th4': 'ميزة DCP',
+
+  'compute.table.r1.c1': 'RTX 5090 (32GB)',
+  'compute.table.r1.c2': 'عنق زجاجة منافذ PCIe الاستهلاكية. بدون دعم مؤسسي.',
+  'compute.table.r1.c3': 'وحدة GPU واحدة (32GB)',
+  'compute.table.r1.c4': 'موثوقية مؤسسية وتوجيه فوري عبر vLLM.',
+
+  'compute.table.r2.c1': 'Nvidia A100 (80GB)',
+  'compute.table.r2.c2': 'التزامات ساعية باهظة وأوقات تجهيز وإعداد طويلة.',
+  'compute.table.r2.c3': '2.5 وحدة GPU (80GB)',
+  'compute.table.r2.c4': 'تنزيل أوزان مجاني وفوترة وقت النشاط فقط.',
+
+  'compute.table.r3.c1': 'Nvidia H200 (141GB)',
+  'compute.table.r3.c2': 'هدر مالي كبير لأوقات الخمول أثناء كتابة الأكواد والتصحيح.',
+  'compute.table.r3.c3': '4.5 وحدة GPU (144GB)',
+  'compute.table.r3.c4': 'إيقاف مؤقت في أي وقت مع توسيع فوري للتزامن.',
+
+  'compute.table.r4.c1': 'عنقود 8x H200 HGX',
+  'compute.table.r4.c2': 'عقود سنوية إلزامية والتزامات شهرية تتجاوز 75 ألف ر.س.',
+  'compute.table.r4.c3': '16–32 وحدة GPU (512GB+)',
+  'compute.table.r4.c4': 'ادفع بدقة لكل ثانية استدلال نشطة.',
+
+  // Compute Page - Re-education
+  'compute.reed.title': 'لماذا استغنينا عن تأجير الخوادم المادية التقليدية؟',
+  'compute.reed.desc': 'تحسب المنصات السحابية المعتادة تكاليف العتاد بمجرد تشغيل الخادم، مما يعني دفع مبالغ عن فترات الإعداد الخاملة وساعات تنزيل الأوزان. توفر خدمتنا (Model-as-a-Service) سعات GPU مخصصة دون هذه التكاليف غير الضرورية. ستحصل على كامل قوة المعالجات بدون أي قيود، مع بدء الفوترة فقط بمجرد تحول فحص صحة الـ API إلى اللون الأخضر. ومن خلال الدفع مقابل وقت التشغيل الفعلي فقط بدلاً من أوقات التجهيز، فإنك توفر ما يصل إلى 30% من تكاليف النشر الحقيقية.',
+  'compute.reed.price': '0.20',
+  'compute.reed.unit': 'لكل جيجابايت / ساعة',
+
+	// Model Card
+  'models.card.parameters': 'المعاملات (Parameters)',
+  'models.card.vram': 'VRAM المطلوبة',
+  'models.card.gb': 'جيجابايت',
+  'models.card.context': 'نافذة السياق',
+  'models.card.tokens': 'رمز (Tokens)',
+  'models.card.details': 'التفاصيل',
+  'models.card.hf_title': 'عرض على Hugging Face',
+	'models.card.rate_label': 'سعر التشغيل النشط',
+  'models.card.per_hr': '/ ساعة',
+
+	// Models Catalog Index
+  'models.index.page_title': 'دليل النماذج | DCP MaaS',
+  'models.index.title': 'دليل النماذج',
+  'models.index.subtitle': 'تصفح قائمتنا المختارة من النماذج المعتمدة مفتوحة الأوزان، الجاهزة للنشر الفوري بفوترة التشغيل الفعلي على سعات VRAM مخصصة.',
+  
+  'models.index.search_placeholder': 'البحث في النماذج...',
+  
+  'models.index.type.all': 'جميع الأنواع',
+  'models.index.type.text2text': 'نص إلى نص',
+  'models.index.type.vision': 'رؤية بصرية (VLM)',
+  'models.index.type.text2image': 'نص إلى صورة',
+  'models.index.type.audio2text': 'صوت إلى نص',
+  
+  'models.index.sort.newest': 'الأحدث أولاً',
+  'models.index.sort.params_desc': 'المعاملات (من الأعلى إلى الأقل)',
+  'models.index.sort.params_asc': 'المعاملات (من الأقل إلى الأعلى)',
+  'models.index.sort.name_asc': 'الاسم (أ - ي)',
+  
+  'models.index.empty_state': 'لم يتم العثور على نماذج تطابق الفلاتر المحددة.',
+
+	// Model Details Page
+  'models.detail.specs': 'المواصفات',
+  'models.detail.about': 'حول هذا النموذج',
+  'models.detail.deploy_cta': 'انشر عبر MaaS',
+  'models.detail.hf_link': 'عرض على Hugging Face',
+  'models.detail.pricing_title': 'تسعير الاستدلال',
+  'models.detail.back': '← العودة إلى الدليل',
 
   // App Teaser
   'app.title': 'الذكاء الاصطناعي المشفر في أي مكان',
@@ -78,54 +353,26 @@ export const ar = {
   'auth.workspace': 'مساحة العمل',
 
   // Navigation
-  'nav.login': 'تسجيل الدخول',
-  'nav.workspace': 'مساحة العمل',
-  'nav.logout': 'تسجيل الخروج',
-	'nav.capabilities': 'القدرات',
-  'nav.security': 'الأمان',
+  'nav.theeban': 'ذيبان',
+  'nav.api': 'API',
+  'nav.maas': 'MaaS',
+  'nav.compute': 'الحوسبة',
+	'nav.models': 'النماذج',
   'nav.pricing': 'الأسعار',
+  'nav.security': 'الأمان',
   'nav.docs': 'دليل المطورين',
-	'nav.enterprise': 'الأعمال',
+  'nav.login': 'تسجيل الدخول',
+  'nav.logout': 'تسجيل الخروج',
+  'nav.workspace': 'مساحة العمل',
 
 	// Footer
-  'footer.rights': '© 2026 سحابة DCP. جميع الحقوق محفوظة.',
+  'footer.description': 'منصة DCP هي المنصة السعودية الرائدة لحوسبة الذكاء الاصطناعي السيادي. نقدم بنية تحتية للحوسبة الصفرية (Zero-Knowledge)، وسعات VRAM مخصصة، والنموذج كخدمة (MaaS) من مراكز بيانات آمنة ومستضافة محلياً داخل المملكة.',
+  'footer.platform': 'المنصة',
+  'footer.resources': 'الموارد',
+  'footer.rights': '© 2024 سحابة DCP. جميع الحقوق محفوظة.',
   'footer.privacy': 'سياسة الخصوصية',
   'footer.terms': 'شروط الخدمة',
-
-	// Capabilities Page
-  'cap.hero.title': 'الذكاء بين يديك. حوسبة تلبي احتياجاتك.',
-  'cap.hero.subtitle': 'من الذكاء الاصطناعي الحواري المشفر بالكامل إلى واجهات برمجة التطبيقات (APIs) الجاهزة وبيئات Jupyter المدارة، توفر سحابة DCP قوة الحوسبة التي تحتاجها، في الوقت الذي تحتاجه.',
-  
-  'cap.models.title': 'أسطول النماذج',
-  'cap.fast.title': 'dcp/fast (السريع)',
-  'cap.fast.desc': 'النموذج العملي. مُحسّن لسرعة الاستجابة والإنتاجية العالية. مثالي للمحادثات الفورية، واستخراج البيانات، والصياغة. استخدام غير محدود في مساحات العمل.',
-  'cap.pro.title': 'dcp/pro (الاحترافي)',
-  'cap.pro.desc': 'المُفكّر. قدرات استنتاجية متقدمة للمنطق المعقد، والبرمجة، ومهام العمل متعددة الخطوات. يعمل بحصة استخدام متجددة كل 4 ساعات.',
-  'cap.pro.degrade': 'في المحادثات: انتقال سلس إلى النموذج السريع عند نفاد الحصة.',
-  'cap.research.title': 'dcp/deep-research (البحث العميق)',
-  'cap.research.desc': 'المُحلّل. نافذة سياق ضخمة وقدرة على توليف البيانات من الويب لإعداد تقارير بحثية شاملة وتحليل البيانات الثقيلة.',
-  
-  'cap.interfaces.title': 'واجهات الاستخدام',
-  'cap.ws.title': 'مساحة عمل مشفرة (Zero-Knowledge)',
-  'cap.ws.desc': 'واجهة محادثة آمنة للغاية ومحمية بمفاتيح المرور (Passkeys) مصممة لفرق المؤسسات.',
-  'cap.ws.feat1': 'سجل محادثات مشفر بالكامل (E2EE)',
-  'cap.ws.feat2': 'تبديل سلس بين النماذج وانتقال تلقائي عند نفاد الحصة',
-  
-  'cap.api.title': 'واجهة برمجة تطبيقات متوافقة (OpenAI)',
-  'cap.api.desc': 'لا حاجة لإعادة كتابة تطبيقاتك. فقط قم بتغيير الرابط الأساسي (Base URL) ومفتاح الـ API للاتصال بخوادمنا.',
-  'cap.api.feat1': 'بنية تحتية لا تحفظ الحالة (Stateless) - لا يتم تسجيل المدخلات أبدًا',
-  'cap.api.feat2': 'فوترة موزونة للرموز (ادفع فقط مقابل ما تستخدمه)',
-  
-  'cap.jupyter.title': 'علوم البيانات، مُدارة بالكامل',
-  'cap.jupyter.subtitle': 'تجاوز تعقيدات الإعداد (DevOps). قم بتشغيل خوادم Jupyter معزولة وعالية الأداء ومجهزة مسبقاً بأحدث أطر عمل تعلم الآلة. احصل على وصول مباشر لوحدات معالجة الرسومات (GPU) مع تخزين كتل مشفر ومستمر - بفوترة بالدقيقة.',
-  
-  'cap.guarantees.title': 'ضمانات المؤسسات',
-  'cap.g1.title': 'توطين البيانات في السعودية',
-  'cap.g1.desc': '100% من قدرات الحوسبة وتخزين البيانات تبقى فعلياً داخل البنية التحتية في المملكة العربية السعودية.',
-  'cap.g2.title': 'مسار بيانات مشفر بالكامل',
-  'cap.g2.desc': 'لا يمكننا قراءة مدخلاتك (Prompts). كل شيء مشفر أثناء التخزين باستخدام ECIES و AES-256.',
-  'cap.g3.title': 'توسع موثوق',
-  'cap.g3.desc': 'بنية تحتية عالية التوافر تضمن بقاء تطبيقاتك الإنتاجية سريعة الاستجابة تحت الضغط.',
+  'footer.made_in': 'صُمم وهُندس بأمان في المملكة العربية السعودية 🇸🇦',
 
 	// Security Page
   'sec.hero.title': 'خصوصية مشفرة. تخزين صفري المعرفة.',
