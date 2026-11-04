@@ -2,7 +2,7 @@
 name: Qwen-Image-2.1
 publish_date: 2026-09-30
 parameters: 7115124736
-v_ram: 1024
+v_ram: 96
 context_window: null
 publisher: Qwen
 icon: /media/i_pxzM2ZDo3Ub-BEgIkE9.png
@@ -65,6 +65,7 @@ meta_data:
   lang: plain
 hf_url: https://huggingface.co/Qwen/Qwen-Image-2.1
 type: text-to-image
+content: We are excited to open-source Qwen-Image-2.1, a unified text-to-image generation and image editing model in the Qwen family. With just 7B parameters in its visual generation component (32 Single-Stream DiT layers), Qwen-Image-2.1 balances generation quality, inference efficiency, and versatility.
 ---
 
 We are excited to open-source Qwen-Image-2.1, a unified text-to-image generation and image editing model in the Qwen family. With just 7B parameters in its visual generation component (32 Single-Stream DiT layers), Qwen-Image-2.1 balances generation quality, inference efficiency, and versatility.

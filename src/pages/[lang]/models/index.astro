@@ -19,6 +19,8 @@ export function getStaticPaths() {
 const allModels = await getCollection('models', (entry) => {
   return entry.id.startsWith(`${lang}/`);
 });
+
+console.log(`allModels: ${allModels}`);
 ---
 
 <Layout title={t('models.index.page_title')} lang={lang}>

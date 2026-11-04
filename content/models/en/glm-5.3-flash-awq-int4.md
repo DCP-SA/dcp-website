@@ -2,7 +2,7 @@
 name: GLM-5.3-Flash-AWQ-INT4
 publish_date: 2026-09-19
 parameters: 56736897886
-v_ram: 96
+v_ram: 256
 context_window: 1048576
 publisher: cyankiwi
 icon: /media/4i5ocsmQodlXnvdJCVnNx.png
@@ -55,4 +55,5 @@ meta_data:
 hf_url: https://huggingface.co/cyankiwi/GLM-5.3-Flash-AWQ-INT4
 type: image-to-image
 ---
+
 We introduce GLM-5.3-Flash, the first natively multimodal model in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks.

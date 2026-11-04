@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import svelte from '@astrojs/svelte';
 import icon from 'astro-icon';
-import typography from '@tailwindcss/typography';
 import serveStatic from 'serve-static';
 
 // https://astro.build/config
