@@ -11,6 +11,7 @@ interface Props {
 const { title, lang } = Astro.props;
 const currentLang = lang || getLangFromUrl(Astro.url);
 const direction = languages[currentLang].dir;
+console.log(`lang: ${lang}, currentLang: ${currentLang}, direction: ${direction}`)
 ---
 
 <!doctype html>
